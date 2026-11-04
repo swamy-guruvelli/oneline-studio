@@ -13,7 +13,7 @@ A scattered stack of job-search tasks becomes one calm, connected application wo
 3. `0.53` — PREPARE / “TAILOR EACH APPLICATION”: one role connects to a tailored CV and cover letter, then to a field-aware review checkpoint. Each stage fills in sequence.
 4. `0.77` — USER CONTROL / “YOU APPROVE”: an application dashboard gathers statuses and next steps. The final submit action remains behind an amber user-approval gate, then changes to green only after the user acts.
 
-The cover uses the English concept title “MindKraft: A Clearer Job Search”, `WHAT IF...?`, and the hook “Roles, applications and updates in one place”. The user interface remains English so the spoken Telugu carries the localization.
+The cover uses the English concept title “MindKraft: A Clearer Job Search”, `WHAT IF...?`, and the hook “Job-search support at mindkraft.co.uk”. The user interface remains English so the spoken Telugu carries the localization.
 
 ## Motion and layout
 
