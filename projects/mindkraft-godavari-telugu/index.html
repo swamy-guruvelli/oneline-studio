@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="te">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=720,initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <link rel="preload" as="image" href="assets/oneline-studio-logo.png">
+    <link rel="stylesheet" href="../../render-engine/style.css">
+    <title>OneLine Studio | MindKraft: A Clearer Job Search</title>
+    <style>
+      h1{font-size:30px}#stage{transition:opacity .2s ease-out}
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="ambient"></div><div class="top-rule"></div>
+      <div id="main-ui" class="main-ui">
+        <div class="brand"><img src="assets/oneline-studio-logo.png" alt="" decoding="sync" fetchpriority="high"><div class="brand-name">OneLine Studio</div></div>
+        <div class="eyebrow">ONE SENTENCE. ONE VIDEO.</div>
+        <div class="kicker">OneLine Studio</div><div class="level-line">VIDEO EXPLAINER</div><h1 id="header-title">MindKraft: A Clearer Job Search</h1>
+        <div id="stage"></div><div id="caption" class="caption"></div>
+        <div class="status"><span id="status-label">EXPLAINER</span><strong id="status-text">FOLLOW THE IDEA</strong></div>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+      </div>
+      <div id="cover" class="cover">
+        <div class="cover-brand"><img src="assets/oneline-studio-logo.png" alt="" decoding="sync" fetchpriority="high"><div class="cover-brand-name">OneLine Studio</div></div>
+        <div class="cover-eyebrow">ONE SENTENCE. ONE VIDEO.</div><div class="cover-rule"></div>
+        <div class="cover-grid"><div id="cover-track" class="cover-track"></div><i class="cover-node" style="left:18%"></i><i class="cover-node" style="left:49%"></i><i class="cover-node" style="left:80%"></i><i id="cover-packet"></i></div>
+        <div id="cover-kicker" class="cover-kicker">OneLine Studio</div>
+        <div id="cover-level" class="cover-level">STANDALONE EXPLAINER</div>
+        <h2 id="cover-title" class="cover-title">MindKraft: A Clearer Job Search</h2>
+        <div id="cover-bottom" class="cover-bottom"><span class="cover-prompt">WHAT IF...?</span><span class="cover-hook">Roles, applications and updates in one place</span></div>
+        <div id="cover-caption" class="caption cover-caption"></div>
+      </div>
+      <div class="grain"></div>
+    </main>
+    <script>
+      window.PROJECT_CONFIG={
+        title:document.getElementById('header-title').textContent,variant:'custom',coverSeconds:1,voiceStartsAtZero:true,coverSubtitleDelay:.3,coverSize:68,headerSize:30,
+        brand:{name:"OneLine Studio",tagline:'ONE SENTENCE. ONE VIDEO.',logoFile:"assets/oneline-studio-logo.png",outro:"MADE WITH ONELINE STUDIO"},
+        scenes:[
+          {startRatio:0,label:'THE PROBLEM',note:'SCATTERED TASKS',status:'FIND A CLEAR NEXT STEP',headline:'JOB SEARCH, SCATTERED'},
+          {startRatio:.27,label:'ROLE MATCH',note:'FOCUS THE SEARCH',status:'KEEP THE ROLES THAT FIT',headline:'RELEVANT ROLES'},
+          {startRatio:.53,label:'APPLICATION SUPPORT',note:'PREPARE WITH CARE',status:'TAILOR. REVIEW. GET READY.',headline:'ONE APPLICATION AT A TIME'},
+          {startRatio:.77,label:'YOUR DECISION',note:'USER APPROVAL',status:'YOU CHOOSE WHAT TO SUBMIT',headline:'YOU STAY IN CONTROL'}
+        ]
+      };
+    </script>
+    <script src="scene.js"></script><script src="../../render-engine/player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "id": "__PROJECT_ID__",
+  "exportSlug": "__EXPORT_SLUG__",
+  "audioFile": "assets/audio/narration.wav",
+  "title": "__TITLE__",
+  "hook": "__HOOK__",
+  "scriptLanguage": "__SCRIPT_LANGUAGE__",
+  "narrationLanguage": "__NARRATION_LANGUAGE__",
+  "captions": {
+    "enabled": __CAPTIONS_ENABLED__,
+    "language": "__CAPTION_LANGUAGE__",
+    "style": "__CAPTION_STYLE__"
+  },
+  "renderer": "auto",
+  "brand": {
+    "name": "__BRAND_NAME__",
+    "tagline": "ONE SENTENCE. ONE VIDEO.",
+    "logoFile": "__BRAND_LOGO__",
+    "outro": "MADE WITH __BRAND_NAME_UPPER__"
+  },
+  "coverSeconds": 1,
+  "voiceStartsAtZero": true
+}

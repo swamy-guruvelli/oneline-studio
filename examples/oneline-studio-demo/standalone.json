@@ -1,0 +1,23 @@
+{
+  "id": "oneline-studio-demo",
+  "exportSlug": "oneline-studio-demo-v1",
+  "audioFile": "assets/audio/narration.wav",
+  "title": "How OneLine Studio Makes a Video",
+  "hook": "What happens between one simple sentence and a finished video?",
+  "scriptLanguage": "en",
+  "narrationLanguage": "en",
+  "captions": {
+    "enabled": true,
+    "language": "same",
+    "style": "karaoke"
+  },
+  "renderer": "pillow",
+  "brand": {
+    "name": "OneLine Studio",
+    "tagline": "ONE SENTENCE. ONE VIDEO.",
+    "logoFile": "assets/oneline-studio-logo.png",
+    "outro": "MADE WITH ONELINE STUDIO"
+  },
+  "coverSeconds": 1,
+  "voiceStartsAtZero": true
+}

@@ -1,0 +1,23 @@
+{
+  "id": "oneline-mindkraft-godavari-telugu",
+  "exportSlug": "mindkraft-godavari-telugu-v1",
+  "audioFile": "assets/audio/narration.wav",
+  "title": "MindKraft: A Clearer Job Search",
+  "hook": "Roles, applications and updates in one place",
+  "scriptLanguage": "te",
+  "narrationLanguage": "te",
+  "captions": {
+    "enabled": false,
+    "language": "same",
+    "style": "phrase"
+  },
+  "renderer": "auto",
+  "brand": {
+    "name": "OneLine Studio",
+    "tagline": "ONE SENTENCE. ONE VIDEO.",
+    "logoFile": "assets/oneline-studio-logo.png",
+    "outro": "MADE WITH ONELINE STUDIO"
+  },
+  "coverSeconds": 1,
+  "voiceStartsAtZero": true
+}
