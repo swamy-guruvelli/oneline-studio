@@ -95,6 +95,57 @@ This sample uses conversational Godavari Telugu and natural English code-switchi
 
 [Watch or download the 114-second MP4](examples/mindkraft-godavari-telugu.mp4).
 
+## Screenshots
+
+Frames from the sample video, from opening to user approval:
+
+| Cover · 0:00 | Scattered search · 0:17 |
+| --- | --- |
+| ![English cover for the MindKraft sample video](examples/screenshots/mindkraft-cover.jpg) | ![Separate job-search tasks shown as scattered cards](examples/screenshots/mindkraft-scattered-search.jpg) |
+
+| Role matching · 0:31 | Application preparation · 1:00 |
+| --- | --- |
+| ![Profile details flowing through a role-fit check](examples/screenshots/mindkraft-role-match.jpg) | ![A tailored CV and cover letter moving through review](examples/screenshots/mindkraft-application-prep.jpg) |
+
+| User approval · 1:27 |
+| --- |
+| ![Application tracker and user approval step](examples/screenshots/mindkraft-user-approval.jpg) |
+
+## Process and architecture
+
+```mermaid
+flowchart LR
+  A[Topic or question] --> B[Scaffold project from template]
+  B --> C[Research, script, design, and scenes]
+  C --> D[Voice direction and narration text]
+  D --> E[User-provided TTS WAV]
+  C --> F[Preflight checks]
+  E --> F
+  F --> G{Renderer route}
+  G -->|Browser available| H[Playwright and scene.js]
+  G -->|Fallback| I[Python, Pillow, and scene_pillow.py]
+  E -. subtitles requested .-> J[Whisper or reviewed timing JSON]
+  J --> H
+  J --> I
+  H --> K[FFmpeg mux and MP4 encode]
+  I --> K
+  K --> L[FFprobe and visual review]
+  L --> M[MP4 and Instagram caption]
+```
+
+Projects are scaffolded from `templates/explainer/` by `scripts/new-explainer.mjs`. `scripts/preflight.mjs` checks the project and available render routes. The render entry point selects the browser or Pillow path, while the supplied WAV sets the video timeline. Whisper timing is optional and used only when requested subtitles need it.
+
+## Technologies
+
+| Layer | Technologies | Role |
+| --- | --- | --- |
+| Project tooling | Node.js, JavaScript ES modules | Project scaffolding, preflight, and render orchestration |
+| Browser scenes | HTML, CSS, JavaScript, Playwright | Responsive scene animation and browser capture |
+| Fallback scenes | Python, Pillow | 2D frame rendering when browser rendering is unavailable |
+| Video assembly | FFmpeg, FFprobe | MP4 encoding, narration muxing, and media inspection |
+| Optional subtitle timing | Whisper, PyTorch | Phrase or word timing from the current narration WAV |
+| Narration audio | User-provided WAV from a chosen TTS tool | Keeps TTS choice with the user; no TTS provider is bundled |
+
 ## Workspace map
 
 | Path | What it contains |

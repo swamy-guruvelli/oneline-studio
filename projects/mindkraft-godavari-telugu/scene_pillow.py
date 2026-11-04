@@ -1,5 +1,6 @@
 """English visual scenes for the Telugu MindKraft narration."""
 
+import math
 from PIL import ImageDraw
 
 SCENES = [
@@ -19,6 +20,10 @@ def card(draw, box, title, subtitle, assets, color=CYAN):
     draw.text((x1 + 18, y1 + 54), subtitle, font=assets["micro_font"], fill=COPY)
 
 
+def pulse_radius(scene_time, base=7, spread=3):
+    return base + spread * (0.5 + 0.5 * math.sin(scene_time * 3.2))
+
+
 def draw_scene(image, scene_index, scene_time, scene, assets):
     draw = ImageDraw.Draw(image)
     draw.rounded_rectangle((24, 240, 696, 900), radius=28, fill=VOID, outline="#214550", width=2)
@@ -31,6 +36,8 @@ def draw_scene(image, scene_index, scene_time, scene, assets):
         card(draw, (482, 404, 666, 552), "APPLICATIONS", "Status updates", assets, DIM)
         draw.line((238, 478, 268, 478), fill=AMBER, width=3)
         draw.line((452, 478, 482, 478), fill=AMBER, width=3)
+        radius = pulse_radius(scene_time, 5, 4)
+        draw.ellipse((360 - radius, 590 - radius, 360 + radius, 590 + radius), fill=AMBER)
         draw.text((360, 640), "TOO MANY TABS. NO CLEAR NEXT STEP.", font=assets["small_font"], fill=AMBER, anchor="mm")
     elif scene_index == 1:
         card(draw, (62, 415, 226, 600), "YOUR PROFILE", "Skills / Experience / Goals", assets)
@@ -39,6 +46,9 @@ def draw_scene(image, scene_index, scene_time, scene, assets):
         draw.text((360, 536), "CHECK", font=assets["micro_font"], fill=COPY, anchor="mm")
         draw.line((226, 514, 292, 514), fill=CYAN, width=4)
         draw.line((428, 514, 494, 514), fill=CYAN, width=4)
+        progress = (scene_time % 3.0) / 3.0
+        marker_x = 226 + int(268 * progress)
+        draw.ellipse((marker_x - 7, 507, marker_x + 7, 521), fill=AMBER)
         card(draw, (494, 407, 658, 468), "ROLE A", "GOOD FIT", assets, GREEN)
         card(draw, (494, 485, 658, 546), "ROLE B", "REVIEW", assets, CYAN)
         draw.text((360, 664), "FOCUS ON ROLES THAT SUIT YOUR EXPERIENCE", font=assets["micro_font"], fill=DIM, anchor="mm")
@@ -48,10 +58,14 @@ def draw_scene(image, scene_index, scene_time, scene, assets):
         card(draw, (78, 531, 642, 618), "TAILORED CV + COVER LETTER", "Prepared for this role", assets)
         draw.line((360, 618, 360, 652), fill=CYAN, width=4)
         card(draw, (78, 652, 642, 739), "FIELD-AWARE REVIEW", "Check details before you decide", assets, GREEN)
+        progress = (scene_time % 3.0) / 3.0
+        marker_y = 492 + int(160 * progress)
+        draw.ellipse((353, marker_y - 7, 367, marker_y + 7), fill=AMBER)
     else:
         card(draw, (58, 405, 370, 493), "APPLICATION TRACKER", "Reviewed / Next step / In progress", assets)
         draw.rounded_rectangle((428, 405, 662, 678), radius=20, fill="#211a0d", outline=AMBER, width=2)
-        draw.ellipse((518, 438, 572, 492), fill="#33250b", outline=AMBER, width=2)
+        radius = pulse_radius(scene_time, 27, 4)
+        draw.ellipse((545 - radius, 465 - radius, 545 + radius, 465 + radius), fill="#33250b", outline=AMBER, width=2)
         draw.text((545, 465), "✓", font=assets["body_font"], fill=AMBER, anchor="mm")
         draw.text((545, 530), "YOUR APPROVAL", font=assets["small_font"], fill=AMBER, anchor="mm")
         draw.text((545, 563), "Review all details", font=assets["micro_font"], fill=COPY, anchor="mm")

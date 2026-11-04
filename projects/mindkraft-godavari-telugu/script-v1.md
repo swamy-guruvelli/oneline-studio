@@ -7,22 +7,26 @@
 - Concept title: MindKraft: A Clearer Job Search
 - Hook: Job-search support at mindkraft.co.uk
 
-## AI Studio delivery direction
+## Voice direction
 
-Speak fluent Telugu in a natural East Godavari conversational style. Keep it warm and friendly, with an easy coastal cadence and everyday turns such as “కదండీ”, “ఏం చేస్తుందంటే”, and “చూస్కుని”. Avoid a comic or exaggerated dialect performance. Say “MindKraft” as “మైండ్‌క్రాఫ్ట్” and “CV” as “సీ వీ”. Read familiar job-search terms naturally within the Telugu. Pause briefly between paragraphs and emphasize that the user chooses and approves every submission.
+Speak in natural, modern Telugu with a mild East Godavari conversational cadence. Sound warm, friendly, confident, and lightly energetic, like explaining something useful to a friend. Use natural Tenglish within Telugu sentence patterns. Keep the same Telugu voice, accent, and cadence across Telugu and English words, phrases, and longer passages. Do not switch to an English accent when speaking English. Keep the delivery smooth and expressive, with crisp pronunciation and natural pauses. Say “MindKraft” as “మైండ్‌క్రాఫ్ట్” and “CV” as “సీ వీ”, both with the same Telugu accent. Avoid dramatic pauses, announcer-style hype, or exaggerated slang. Gently emphasize that the user reviews and approves each application and decides when to submit it.
 
 ## Narration text for TTS
 
 ```text
-యూకేలో ఉద్యోగం వెతుకుతున్నారా? ఒక్కో ఉద్యోగానికీ సీవీ మార్చాలి, కవర్ లెటర్ రాయాలి, ఎక్కడ అప్లై చేశామో గుర్తుపెట్టుకోవాలి. ఇవన్నీ వేర్వేరు చోట్ల పెట్టుకుని చూస్తే, అబ్బా, తికమక కాక ఏం అవుతుంది మరి? మంచి అవకాశం కూడా కళ్లముందే జారిపోతుంది కదండీ.
+యూకేలో job వెతుకుతున్నారా? ఒక vacancy కనిపించగానే పని అయిపోయినట్టు కాదు కదండీ. ఆ jobకి తగ్గట్టు CV చూసుకోవాలి, cover letter రాయాలి, apply చేసిన తర్వాత ఏమైందో మళ్లీ చూడాలి. ఒక link emailలో, CV ఇంకోచోట, update మరోచోట ఉంటే ఏది ఎక్కడ పెట్టామో గుర్తుపెట్టుకోవడమే పెద్ద పని అవుతుంది.
 
-ఇక్కడే MindKraft పనికొస్తుంది. మీ అనుభవానికి సరిపోయే ఉద్యోగాల్ని వెతకడంలో సాయం, ప్రతి roleకి తగ్గ CV, cover letter సిద్ధం చేసుకోవడానికి మార్గదర్శకం, అప్లికేషన్ అప్‌డేట్లు ఒకే చోట ట్రాక్ చేసుకోవచ్చు — మొత్తం ఒకే workspaceలో.
+ఈ తికమక కాస్త సర్దుకోవడానికి MindKraft సాయం చేస్తుంది. మీకు ఏ పని కావాలో, ఇప్పటివరకు ఏం అనుభవం ఉందో profileలో చెప్తారు. దాన్ని బట్టి సరిపోయే jobsని చూసి, నిజంగా పనికొచ్చే వాటిమీద దృష్టి పెట్టొచ్చు.
 
-మీకు నచ్చిన ఉద్యోగం కనిపించిందా? దాని లింకు పంపించి, మీకు సరిపోతుందా, అప్లికేషన్‌లో ఏం మెరుగుపరచాలో అడగొచ్చు. మీ రంగం తెలిసిన వాళ్ల దగ్గర నుంచి feedback కూడా తీసుకోవచ్చు.
+ఉదాహరణకి, డిజైనర్ jobకి apply చేస్తున్నారనుకోండి. ఆ job descriptionలో user research అడిగారు. మీరు నిజంగానే user research చేసి ఉంటే, ఆ project గురించి CVలో బాగా వివరంగా రాయండి. ప్రతి jobకి ఒకే CV పంపే బదులు, ఆ roleకి పనికొచ్చే మీ అనుభవాన్ని ముందుకు తేవాలి. CV, cover letter, applicationలో రాసే answersని మెరుగుపరుచుకోవడంలో MindKraft సాయం చేస్తుంది.
 
-కానీ ఇక్కడ ఒకటి స్పష్టంగా: మీ బదులు MindKraft అప్లై చేసేయదు. చివరి CV, జవాబులన్నీ మీరే చూస్కుని, ఏది పంపాలో మీరే ఓకే చెప్పి నిర్ణయిస్తారు.
+మీకు నచ్చిన job మీరే చూసినా పర్లేదు. Link పంపి, “ఈ role నాకు సరిపోతుందా? నా applicationలో ఏం మార్చుకుంటే బాగుంటుంది?” అని అడగొచ్చు. మీ రంగం తెలిసిన వాళ్ల feedback కూడా తీసుకోవచ్చు.
 
-అంటే, ఉద్యోగం వెతికే పనులన్నీ ఒకచోట సర్దేసి, చివరి మాట మాత్రం మీ చేతిలో ఉంచే సాయం. అదే MindKraft. మరిన్ని వివరాలకు మైండ్‌క్రాఫ్ట్ డాట్ కో డాట్ యూ కే చూడండి.
+Apply చేసిన తర్వాత, application ఏ stageలో ఉందో, కొత్త update ఏదైనా వచ్చిందో, తర్వాత ఏం చేయాలో dashboardలో చూడొచ్చు. పనులన్నీ ఒకచోట ఉంటే వెతుకులాట కొంచెం తేలిక అవుతుంది కదా.
+
+కానీ apply చేసేది మాత్రం మీరే. MindKraft మీ బదులుగా apply చేయదు. మీ CV, applicationలో రాసిన answers, మిగతా వివరాలన్నీ మీరే చూసి ఓకే చెప్తారు. ఎప్పుడు submit చేయాలో కూడా మీరే నిర్ణయిస్తారు.
+
+ఉద్యోగం వస్తుందని హామీ ఇవ్వదు. కానీ job searchలో చెల్లాచెదురుగా ఉన్న పనుల్ని ఒకచోట సర్దుకుని, ఒక్కో applicationని జాగ్రత్తగా ready చేసుకోవడానికి తోడుంటుంది. చివరి మాట మీదే. MindKraft డాట్ కో డాట్ యూ కే.
 ```
 
 ## Spoken transcript for timing (optional)
@@ -35,14 +39,14 @@ Leave this section without a text block unless the user asks for on-video subtit
 
 ## Instagram caption
 
-ఉద్యోగం వెతకడం అంటే కేవలం మంచి vacancy కనిపెట్టడమే కాదు కదా. ఒక్కో roleకి CVలో ఏం మార్చాలి, cover letter ఎలా రాయాలి, అప్లికేషన్ ఎక్కడిదాకా వచ్చింది, తర్వాత ఏం చేయాలి — ఇవన్నీ చూసుకుంటూ పోతే, అసలు ఉద్యోగం వెతకడానికే టైమ్ మిగలదు.
+Job searching can turn into a pile of separate tasks: finding suitable roles, tailoring a CV, preparing a cover letter, and remembering what happened after each application. Keeping all those details straight takes time and can make the next step hard to see.
 
-MindKraft ఈ పనుల్ని ఒకే job-search workspaceలో సర్దుకునేలా సహాయం చేస్తుంది. మీ అనుభవం, లక్ష్యాలు, మీకు కావాల్సిన role ఆధారంగా అవకాశాల్ని పరిశీలించొచ్చు. CV, cover letter, అప్లికేషన్ సమాధానాల్ని roleకి తగ్గట్టు మెరుగుపరచుకోవడంలో సహాయం తీసుకోవచ్చు. ఇప్పటికే మీకు నచ్చిన job link ఉంటే దాన్నీ పంచుకుని, ఆ అవకాశం మీకు ఎంతవరకు సరిపోతుందో, అప్లికేషన్‌లో ఏం మార్చాలో అడగొచ్చు.
+MindKraft brings job-search support and application tracking together in one workspace. Its site describes role suggestions based on your experience and goals, help with tailoring CVs and application answers, and a dashboard for following application status and next steps. If you've already found a job, you can share the link and ask for help assessing whether it fits and what to strengthen in your application.
 
-మీ అప్లికేషన్లు ఎక్కడికి వచ్చాయో, ఏ update వచ్చింది, తర్వాతి step ఏంటో ఒకచోట చూసుకోవడం వల్ల వెతుకులాట కాస్త క్రమంగా సాగుతుంది. మీ రంగాన్ని అర్థం చేసుకునే వాళ్ల feedback కూడా ఉపయోగపడొచ్చు. కానీ ఇక్కడ ఒక ముఖ్యమైన విషయం ఉంది: MindKraft మీ తరఫున ప్రతి ఉద్యోగానికీ ఆటోమేటిక్‌గా అప్లై చేయదు. CV, సమాధానాలు, వివరాలు చివరిసారి చూసి, ఏది పంపాలో మీరే approve చేసి నిర్ణయిస్తారు.
+People who understand your field may offer practical feedback. Before anything is submitted, you can review the CV, answers, and application details, approve the version you want, and decide when it is ready. MindKraft says it does not automatically send every application, so the final choice stays with you.
 
-ప్రారంభించేటప్పుడు మీ తాజా CV, మీ అనుభవానికి సంబంధించిన నిజమైన వివరాలు, తర్వాత వెతుకుతున్న పని రకం స్పష్టంగా ఉంచండి. వచ్చిన role suggestionsను మీ లక్ష్యాలతో పోల్చండి. ఒక అప్లికేషన్‌ను సిద్ధం చేస్తుంటే, ఉద్యోగ ప్రకటనలో అడిగిన నైపుణ్యాలకు మీ అనుభవం ఎలా సరిపోతుందో చెప్పే నిజమైన ఉదాహరణల్ని ఎంచుకోండి. సూచనలు ఉపయోగకరంగా ఉన్నా, ప్రతి వివరాన్ని మీరే తనిఖీ చేయాలి. తప్పు లేదా నిర్ధారించని విషయం ఉంటే దాన్ని మార్చిన తర్వాతే ముందుకు వెళ్లాలి.
+A useful search routine starts with an up-to-date CV, clear preferences, and a shortlist of responsibilities you want in your next role. Compare each opportunity with your real experience, keep examples accurate, and check each suggested change before using it. Tracking statuses and next steps in one place can help you see what needs attention without losing sight of your own priorities.
 
-అంటే, సరిపోయే rolesని వెతకడం నుంచి అప్లికేషన్‌లను organize చేసుకోవడం వరకు సాయం ఒకచోట. చివరి మాట మాత్రం మీది. Job searchలో ఏం చేస్తున్నామో స్పష్టంగా చూసుకుంటూ ముందుకు వెళ్లాలనుకుంటే, MindKraft గురించి mindkraft.co.ukలో తెలుసుకోండి.
+MindKraft focuses on the time-consuming parts of a UK job search: exploring roles, strengthening applications, and keeping the process organised. It supports preparation and progress tracking, but no platform can guarantee an interview or offer. Product details and terms are on mindkraft.co.uk.
 
 #MindKraft #JobSearchUK #CVTips #CareerSupport #JobApplications

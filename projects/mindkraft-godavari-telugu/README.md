@@ -1,20 +1,21 @@
 # MindKraft: A Clearer Job Search
 
-This project explains MindKraft's UK job-search support with Telugu narration in a mild Godavari conversational style. The cover, visual beat labels, and diagrams stay in English. On-video subtitles are off.
+This project explains MindKraft's UK job-search support with Telugu narration in a mild Godavari conversational style. The cover, visual beat labels, diagrams, and Instagram caption stay in English. On-video subtitles are off.
 
-## Narration handoff
+## Narration and render
 
-The approved Telugu script and AI Studio delivery direction are in `script-v1.md`. Generate a Telugu WAV from that narration text in AI Studio and provide the exact file. Save it as `assets/audio/narration.wav` to continue this project with the supplied recording.
+The current Telugu script and video-specific voice direction are in `script-v1.md`. The supplied `Generated Audio November 04, 2026 - 8_59PM.wav` is saved as `assets/audio/narration.wav`. The rendered MP4 is tracked under `examples/mindkraft-godavari-telugu.mp4`. On-video subtitles are off. The video is 720x1280 at 30 fps with H.264 video and AAC audio; the narration is 111.28 seconds, followed by a 3-second closing hold.
 
 ## Project files
 
 - `standalone.json`: language, cover, brand, audio, and subtitle settings.
-- `script-v1.md`: Telugu narration, voice direction, and Telugu Instagram caption.
+- `script-v1.md`: Telugu narration, voice direction, and English Instagram caption.
 - `research.md`: MindKraft source checks and caveats.
 - `design-v1.md`: English visual direction and scene beat map.
 - `index.html`, `scene.js`: English cover and animated browser visuals.
 - `scene_pillow.py`: matching browser-free 2D visual plan.
-- `assets/audio/`: destination for the confirmed narration WAV.
-- `exports/`: final MP4 after narration, plus temporary review material.
+- `assets/audio/narration.wav`: supplied Telugu narration.
+- `exports/mindkraft-godavari-telugu-v1.mp4`: rendered video.
+- `exports/review/`: temporary review frames, removed after visual inspection.
 
-Once the WAV is supplied, run `npm run preflight -- projects/mindkraft-godavari-telugu`, render with `render-v1.mjs`, then inspect and deliver the MP4 with the complete Instagram caption.
+For this video, keep the current project-specific direction in `script-v1.md`. Use the reusable multilingual guidance in `docs/narration-language-guide.md` for future scripts.
