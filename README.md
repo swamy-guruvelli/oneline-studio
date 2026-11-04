@@ -1,56 +1,82 @@
 # OneLine Studio
 
-**Turn one sentence into a researched, scripted, narrated, animated vertical video.** OneLine Studio creates a complete video project from a topic or question. It runs in ChatGPT Workspace and on ordinary PCs.
+**Turn one idea into a finished vertical video.** OneLine Studio helps research a topic, write a spoken script, plan animated scenes, and render an MP4 with an Instagram caption. It works in ChatGPT Workspace or from a local computer.
 
-## Start with one sentence
+## What it does
 
-Give OneLine Studio a topic or question in a sentence. It can infer the title and hook, use OneLine Studio branding, select a matching style, and build the project. You can also choose a title, brand, logo, or script language.
+Start with a topic or question. OneLine Studio turns it into a short explanation with a concrete example, a script and voice direction, animated visuals, and a caption for social posting. It uses a narration WAV supplied by the user, so the user can choose the TTS service and voice.
 
-To scaffold a project from a terminal:
+The default video is under two minutes, portrait format, English on-screen text, and no on-video subtitles. The spoken narration follows the requested language. Other visual and caption languages can be changed when requested.
+
+## Example
+
+**MindKraft: A clearer UK job search** uses conversational Godavari Telugu with natural English code-switching in the narration. The cover, visual beats, and Instagram caption stay in English.
+
+[Watch or download the 114-second sample video](examples/mindkraft-godavari-telugu.mp4).
+
+| Opening cover | User approval scene |
+| --- | --- |
+| ![MindKraft video cover](examples/screenshots/mindkraft-cover.jpg) | ![MindKraft application tracker and user approval scene](examples/screenshots/mindkraft-user-approval.jpg) |
+
+## Architecture
+
+```mermaid
+flowchart TD
+  A[Topic or question] --> B[Research and explanation plan]
+  B --> C[Project scaffold from a style template]
+  C --> D[Script, voice direction, and visual plan]
+  D --> E[Scene code and project settings]
+  D --> F[User generates or supplies narration WAV]
+  E --> G[Preflight checks]
+  F --> H{Subtitles requested?}
+  H -->|Yes| I[Whisper alignment or reviewed timing JSON]
+  H -->|No| G
+  I --> G
+  G --> J{Renderer available}
+  J -->|Browser| K[Playwright renders scene.js]
+  J -->|Fallback| L[Python and Pillow render scene_pillow.py]
+  K --> M[FFmpeg assembles video and narration]
+  L --> M
+  F --> M
+  M --> N[FFprobe and visual review]
+  N --> O[MP4 and Instagram caption]
+```
+
+The CLI copies `templates/explainer/` into a project. Projects keep their research, script, voice direction, scenes, narration, timings, and exports together. The browser and Pillow routes share the WAV-based timeline and final FFmpeg assembly.
+
+## How to use it
+
+### In ChatGPT Workspace
+
+Give OneLine Studio a topic or question in one sentence. You can also request a title, brand, logo, visual style, script language, or subtitles. The handoff provides the spoken script and its voice direction.
+
+Use any TTS tool or free account that can export a WAV, then provide that recording. If you prefer an internal TTS option, approve a check for availability first. The project uses the supplied WAV as its narration and timing source.
+
+### From a local computer
+
+Install the project dependencies and create a project from a sentence:
 
 ```powershell
 npm.cmd install
 npm.cmd run new -- "Why does a database index make lookups faster?"
 ```
 
-Optional overrides:
+The command creates a folder under `projects/`. Add the researched script, voice direction, narration WAV, and topic-specific scenes before rendering. You can optionally set the title, hook, brand, or logo:
 
 ```powershell
-npm.cmd run new -- --topic "Why does a database index make lookups faster?" --title "Database Indexes" --brand "Example Studio" --logo "C:\path\to\logo.png"
+npm.cmd run new -- --topic "Why does a database index make lookups faster?" --title "Database Indexes" --hook "Find the row faster" --brand "Example Studio"
 ```
 
-Set spoken-script and supplied-narration languages with ISO codes. `auto` lets Whisper detect narration language during subtitle alignment. On-video subtitles stay off unless requested:
+Set the spoken-script and WAV languages with ISO language codes. `auto` lets subtitle alignment detect the WAV language:
 
 ```powershell
-npm.cmd run new -- --topic "Why does a database index make lookups faster?" --script-language ta --narration-language ta
-npm.cmd run new -- --topic "Why does a database index make lookups faster?" --script-language es --narration-language es --captions phrase --caption-language en
-npm.cmd run new -- --topic "Why does a database index make lookups faster?" --captions karaoke
+npm.cmd run new -- --topic "Explain this idea" --script-language ta --narration-language ta
+npm.cmd run new -- --topic "Explain this idea" --script-language es --narration-language es --captions phrase --caption-language en
 ```
 
-The earlier `<slug> "Title" "Cover hook"` command form remains supported.
+Video subtitles are off by default. Use `--captions phrase` for phrase subtitles or `--captions karaoke` for same-language word highlighting. Translated subtitles use phrase timing. Do not run Whisper just for timing when subtitles are off.
 
-## Production flow
-
-1. Start from the user's sentence and identify the viewer and one useful idea.
-2. Verify technical claims against authoritative sources and save links and caveats in `research.md`.
-3. Write the narration directly in the requested language and style, with a concrete example. Provide the script and a separate voice direction.
-4. Choose a matching visual template, create animated scenes, and keep on-screen copy in English by default.
-5. Add the approved narration WAV, time the scenes to it, render, and review the MP4.
-6. Deliver the video with its complete Instagram caption.
-
-Keep videos at or below two minutes unless the user approves a longer runtime. Phrase subtitles are the default when subtitles are requested. Use karaoke highlighting only when subtitle text is in the spoken language and fresh word timings exist for the current recording. For translated subtitles, use phrase timing. Do not run Whisper just for timing when subtitles are off.
-
-## Narration handoff
-
-The handoff gives the user a script and voice direction. They can use any TTS service or free account that supports WAV export, then provide the generated recording. Save the confirmed file as `assets/audio/narration.wav`; the renderer uses that exact recording as the video clock.
-
-If the user prefers an internal TTS option, ask for approval before checking whether one is available in the active environment. Do not assume an internal service exists or name a provider before checking.
-
-When requested subtitles need alignment, pass the known `narrationLanguage` or use `auto`. If automatic recognition fails or does not match the recording, use reviewed timing JSON for that exact WAV. Never reuse timings from another recording. If the supplied WAV differs from the narration block, add its exact transcript under `## Spoken transcript for timing` when subtitle timing is needed.
-
-## Render and review
-
-Run the project preflight, render, and review scripts from the workspace root:
+Check the project, render, and create review frames:
 
 ```powershell
 npm.cmd run preflight -- projects/my-concept
@@ -58,107 +84,40 @@ node projects/my-concept/render-v1.mjs
 node projects/my-concept/review-v1.mjs
 ```
 
-The browser renderer is used when Playwright can launch Chromium, Edge, or Chrome. Otherwise, `renderer: "auto"` falls back to the Pillow 2D renderer. Both routes use WAV duration and scene beats for timing. FFmpeg and FFprobe are required to assemble and inspect the MP4.
+The final MP4 is written to the project's `exports/` folder. Include it with the Instagram caption when delivering the finished video.
 
-Install core dependencies when the environment allows it:
+### Install rendering dependencies
 
 ```powershell
 npm.cmd install
 python -m pip install -r requirements-render-pillow.txt
 ```
 
-`requirements-align.txt` is optional and needed only for automatic Whisper alignment. To install Playwright's Chromium:
+Playwright's Chromium is optional. Install it with `npm.cmd run browser:install`. If a supported browser cannot launch, `renderer: "auto"` uses Pillow. `requirements-align.txt` is optional and is only needed for automatic Whisper subtitle alignment. FFmpeg and FFprobe are required for video assembly and inspection.
 
-```powershell
-npm.cmd run browser:install
-```
+On macOS or Linux, use `npm` instead of `npm.cmd`.
 
-If dependencies cannot be installed, use available system FFmpeg/FFprobe and Pillow. `npm.cmd run preflight` reports which renderer is ready. Use `npm` instead of `npm.cmd` in macOS or Linux shells. See [the rendering guide](docs/rendering.md).
+## Tools used
 
-Review the exact opening frame, cover handoff, scene transitions, dense diagrams, audio sync, and final hold. Keep temporary images in `exports/review/` and remove them after review.
-
-## Visual and publishing defaults
-
-- 720 x 1280 portrait video at 30 fps with AAC audio.
-- OneLine Studio logo and wordmark by default. Custom branding is opt-in.
-- Topic-specific visual metaphors and purposeful animated state changes.
-- English cover, visual labels, and Instagram caption by default. Narration follows the requested language.
-- No on-video subtitles unless requested.
-- Instagram caption target: 1,500-2,000 characters including spaces and hashtags, under 2,200 characters, with up to five relevant hashtags.
-- Include both the MP4 and complete caption in the final delivery.
-
-## Examples
-
-### MindKraft: A clearer UK job search
-
-This sample uses conversational Godavari Telugu and natural English code-switching in the narration. The cover, visual beats, and Instagram caption stay in English, with on-video subtitles off.
-
-[Watch or download the 114-second MP4](examples/mindkraft-godavari-telugu.mp4).
-
-## Screenshots
-
-Frames from the sample video, from opening to user approval:
-
-| Cover · 0:00 | Scattered search · 0:17 |
+| Tool | What it does here |
 | --- | --- |
-| ![English cover for the MindKraft sample video](examples/screenshots/mindkraft-cover.jpg) | ![Separate job-search tasks shown as scattered cards](examples/screenshots/mindkraft-scattered-search.jpg) |
+| Node.js and JavaScript ES modules | Scaffold projects, check the environment, and coordinate rendering. |
+| HTML, CSS, JavaScript, and Playwright | Build animated browser scenes and capture them. |
+| Python and Pillow | Draw 2D scenes when browser rendering is unavailable. |
+| FFmpeg and FFprobe | Assemble frames with narration, encode the MP4, and inspect media properties. |
+| Whisper and PyTorch (optional) | Align narration to phrases or words when subtitles are requested. |
+| User-selected TTS tool | Generate the narration WAV. OneLine Studio does not bundle a TTS provider. |
 
-| Role matching · 0:31 | Application preparation · 1:00 |
+## Repository layout
+
+| Path | Purpose |
 | --- | --- |
-| ![Profile details flowing through a role-fit check](examples/screenshots/mindkraft-role-match.jpg) | ![A tailored CV and cover letter moving through review](examples/screenshots/mindkraft-application-prep.jpg) |
-
-| User approval · 1:27 |
-| --- |
-| ![Application tracker and user approval step](examples/screenshots/mindkraft-user-approval.jpg) |
-
-## Process and architecture
-
-```mermaid
-flowchart LR
-  A[Topic or question] --> B[Scaffold project from template]
-  B --> C[Research, script, design, and scenes]
-  C --> D[Voice direction and narration text]
-  D --> E[User-provided TTS WAV]
-  C --> F[Preflight checks]
-  E --> F
-  F --> G{Renderer route}
-  G -->|Browser available| H[Playwright and scene.js]
-  G -->|Fallback| I[Python, Pillow, and scene_pillow.py]
-  E -. subtitles requested .-> J[Whisper or reviewed timing JSON]
-  J --> H
-  J --> I
-  H --> K[FFmpeg mux and MP4 encode]
-  I --> K
-  K --> L[FFprobe and visual review]
-  L --> M[MP4 and Instagram caption]
-```
-
-Projects are scaffolded from `templates/explainer/` by `scripts/new-explainer.mjs`. `scripts/preflight.mjs` checks the project and available render routes. The render entry point selects the browser or Pillow path, while the supplied WAV sets the video timeline. Whisper timing is optional and used only when requested subtitles need it.
-
-## Technologies
-
-| Layer | Technologies | Role |
-| --- | --- | --- |
-| Project tooling | Node.js, JavaScript ES modules | Project scaffolding, preflight, and render orchestration |
-| Browser scenes | HTML, CSS, JavaScript, Playwright | Responsive scene animation and browser capture |
-| Fallback scenes | Python, Pillow | 2D frame rendering when browser rendering is unavailable |
-| Video assembly | FFmpeg, FFprobe | MP4 encoding, narration muxing, and media inspection |
-| Optional subtitle timing | Whisper, PyTorch | Phrase or word timing from the current narration WAV |
-| Narration audio | User-provided WAV from a chosen TTS tool | Keeps TTS choice with the user; no TTS provider is bundled |
-
-## Workspace map
-
-| Path | What it contains |
-| --- | --- |
-| `projects/<slug>/` | Local scripts, research, scenes, narration, timing, review, and exports. Ignored by Git by default. |
-| `examples/` | Small tracked video examples and sample project source. |
-| `templates/<style>/` | Reusable visual and production styles. |
-| `render-engine/` | Shared browser and Pillow rendering tools. |
-| `scripts/` | Project scaffolder and environment preflight. |
+| `scripts/` | Project scaffolder and preflight check. |
+| `templates/<style>/` | Reusable project and visual templates. |
+| `render-engine/` | Shared browser and Pillow renderers. |
+| `docs/` | Rendering and multilingual narration guides. |
+| `projects/<slug>/` | Local project files. This folder is ignored by Git by default. |
+| `examples/` | Tracked video examples and sample project source. |
 | `AGENTS.md` | Project authoring and delivery rules. |
 
-## License
-
-OneLine Studio is released under the MIT License. See [`LICENSE`](LICENSE).
-
-Read [`AGENTS.md`](AGENTS.md) before starting a project.
+OneLine Studio is released under the MIT License. See [`LICENSE`](LICENSE). Read [`AGENTS.md`](AGENTS.md) before starting a project.
