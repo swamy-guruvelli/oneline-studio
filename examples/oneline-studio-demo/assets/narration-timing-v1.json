@@ -1,0 +1,611 @@
+{
+  "voice": "Google AI Studio narration aligned with local Whisper word timestamps",
+  "durationSeconds": 40.24,
+  "alignment": {
+    "scriptWords": 110,
+    "recognizedWords": 110,
+    "editCount": 3,
+    "device": "cuda"
+  },
+  "sentences": [
+    {
+      "text": "Can one simple sentence become a complete video? Here's the path.",
+      "startSec": 0.0,
+      "endSec": 4.34,
+      "words": [
+        {
+          "text": "Can",
+          "startSec": 0.0,
+          "endSec": 0.04
+        },
+        {
+          "text": "one",
+          "startSec": 0.0,
+          "endSec": 0.48
+        },
+        {
+          "text": "simple",
+          "startSec": 0.48,
+          "endSec": 1.02
+        },
+        {
+          "text": "sentence",
+          "startSec": 1.02,
+          "endSec": 1.54
+        },
+        {
+          "text": "become",
+          "startSec": 1.76,
+          "endSec": 1.98
+        },
+        {
+          "text": "a",
+          "startSec": 1.98,
+          "endSec": 2.24
+        },
+        {
+          "text": "complete",
+          "startSec": 2.24,
+          "endSec": 2.54
+        },
+        {
+          "text": "video?",
+          "startSec": 2.54,
+          "endSec": 2.94
+        },
+        {
+          "text": "Here's",
+          "startSec": 3.42,
+          "endSec": 3.96
+        },
+        {
+          "text": "the",
+          "startSec": 3.96,
+          "endSec": 4.04
+        },
+        {
+          "text": "path.",
+          "startSec": 4.04,
+          "endSec": 4.34
+        }
+      ]
+    },
+    {
+      "text": "Start with a topic or question. OneLine Studio turns it into a short visual explanation.",
+      "startSec": 5.18,
+      "endSec": 10.12,
+      "words": [
+        {
+          "text": "Start",
+          "startSec": 5.18,
+          "endSec": 5.38
+        },
+        {
+          "text": "with",
+          "startSec": 5.38,
+          "endSec": 5.56
+        },
+        {
+          "text": "a",
+          "startSec": 5.56,
+          "endSec": 5.66
+        },
+        {
+          "text": "topic",
+          "startSec": 5.66,
+          "endSec": 5.9
+        },
+        {
+          "text": "or",
+          "startSec": 5.9,
+          "endSec": 6.06
+        },
+        {
+          "text": "question.",
+          "startSec": 6.06,
+          "endSec": 6.46
+        },
+        {
+          "text": "OneLine",
+          "startSec": 7.18,
+          "endSec": 7.36
+        },
+        {
+          "text": "Studio",
+          "startSec": 7.36,
+          "endSec": 7.76
+        },
+        {
+          "text": "turns",
+          "startSec": 7.76,
+          "endSec": 8.06
+        },
+        {
+          "text": "it",
+          "startSec": 8.06,
+          "endSec": 8.2
+        },
+        {
+          "text": "into",
+          "startSec": 8.2,
+          "endSec": 8.4
+        },
+        {
+          "text": "a",
+          "startSec": 8.4,
+          "endSec": 8.52
+        },
+        {
+          "text": "short",
+          "startSec": 8.52,
+          "endSec": 8.82
+        },
+        {
+          "text": "visual",
+          "startSec": 8.82,
+          "endSec": 9.48
+        },
+        {
+          "text": "explanation.",
+          "startSec": 9.48,
+          "endSec": 10.12
+        }
+      ]
+    },
+    {
+      "text": "First, it checks the facts and builds a script around one useful example.",
+      "startSec": 10.98,
+      "endSec": 14.76,
+      "words": [
+        {
+          "text": "First,",
+          "startSec": 10.98,
+          "endSec": 11.44
+        },
+        {
+          "text": "it",
+          "startSec": 11.58,
+          "endSec": 11.64
+        },
+        {
+          "text": "checks",
+          "startSec": 11.64,
+          "endSec": 11.82
+        },
+        {
+          "text": "the",
+          "startSec": 11.82,
+          "endSec": 12.04
+        },
+        {
+          "text": "facts",
+          "startSec": 12.04,
+          "endSec": 12.28
+        },
+        {
+          "text": "and",
+          "startSec": 12.28,
+          "endSec": 12.6
+        },
+        {
+          "text": "builds",
+          "startSec": 12.6,
+          "endSec": 12.94
+        },
+        {
+          "text": "a",
+          "startSec": 12.94,
+          "endSec": 13.08
+        },
+        {
+          "text": "script",
+          "startSec": 13.08,
+          "endSec": 13.3
+        },
+        {
+          "text": "around",
+          "startSec": 13.3,
+          "endSec": 13.6
+        },
+        {
+          "text": "one",
+          "startSec": 13.6,
+          "endSec": 13.86
+        },
+        {
+          "text": "useful",
+          "startSec": 13.86,
+          "endSec": 14.24
+        },
+        {
+          "text": "example.",
+          "startSec": 14.24,
+          "endSec": 14.76
+        }
+      ]
+    },
+    {
+      "text": "Then each part of the explanation gets a matching scene, so viewers can see what changes and why.",
+      "startSec": 15.44,
+      "endSec": 20.58,
+      "words": [
+        {
+          "text": "Then",
+          "startSec": 15.44,
+          "endSec": 15.72
+        },
+        {
+          "text": "each",
+          "startSec": 15.72,
+          "endSec": 16.06
+        },
+        {
+          "text": "part",
+          "startSec": 16.06,
+          "endSec": 16.42
+        },
+        {
+          "text": "of",
+          "startSec": 16.42,
+          "endSec": 16.6
+        },
+        {
+          "text": "the",
+          "startSec": 16.6,
+          "endSec": 16.72
+        },
+        {
+          "text": "explanation",
+          "startSec": 16.72,
+          "endSec": 17.3
+        },
+        {
+          "text": "gets",
+          "startSec": 17.3,
+          "endSec": 17.52
+        },
+        {
+          "text": "a",
+          "startSec": 17.52,
+          "endSec": 17.7
+        },
+        {
+          "text": "matching",
+          "startSec": 17.7,
+          "endSec": 17.96
+        },
+        {
+          "text": "scene,",
+          "startSec": 17.96,
+          "endSec": 18.32
+        },
+        {
+          "text": "so",
+          "startSec": 18.32,
+          "endSec": 18.72
+        },
+        {
+          "text": "viewers",
+          "startSec": 18.72,
+          "endSec": 19.06
+        },
+        {
+          "text": "can",
+          "startSec": 19.06,
+          "endSec": 19.3
+        },
+        {
+          "text": "see",
+          "startSec": 19.3,
+          "endSec": 19.52
+        },
+        {
+          "text": "what",
+          "startSec": 19.52,
+          "endSec": 19.68
+        },
+        {
+          "text": "changes",
+          "startSec": 19.68,
+          "endSec": 20.06
+        },
+        {
+          "text": "and",
+          "startSec": 20.06,
+          "endSec": 20.3
+        },
+        {
+          "text": "why.",
+          "startSec": 20.3,
+          "endSec": 20.58
+        }
+      ]
+    },
+    {
+      "text": "When the narration is ready, its words are timed to the voice. Those timings move the karaoke captions one word at a time.",
+      "startSec": 21.3,
+      "endSec": 28.02,
+      "words": [
+        {
+          "text": "When",
+          "startSec": 21.3,
+          "endSec": 21.62
+        },
+        {
+          "text": "the",
+          "startSec": 21.62,
+          "endSec": 21.76
+        },
+        {
+          "text": "narration",
+          "startSec": 21.76,
+          "endSec": 22.04
+        },
+        {
+          "text": "is",
+          "startSec": 22.04,
+          "endSec": 22.34
+        },
+        {
+          "text": "ready,",
+          "startSec": 22.34,
+          "endSec": 22.66
+        },
+        {
+          "text": "its",
+          "startSec": 22.94,
+          "endSec": 23.04
+        },
+        {
+          "text": "words",
+          "startSec": 23.04,
+          "endSec": 23.24
+        },
+        {
+          "text": "are",
+          "startSec": 23.24,
+          "endSec": 23.44
+        },
+        {
+          "text": "timed",
+          "startSec": 23.44,
+          "endSec": 23.8
+        },
+        {
+          "text": "to",
+          "startSec": 23.8,
+          "endSec": 24.0
+        },
+        {
+          "text": "the",
+          "startSec": 24.0,
+          "endSec": 24.1
+        },
+        {
+          "text": "voice.",
+          "startSec": 24.1,
+          "endSec": 24.34
+        },
+        {
+          "text": "Those",
+          "startSec": 24.92,
+          "endSec": 25.14
+        },
+        {
+          "text": "timings",
+          "startSec": 25.14,
+          "endSec": 25.68
+        },
+        {
+          "text": "move",
+          "startSec": 25.68,
+          "endSec": 25.86
+        },
+        {
+          "text": "the",
+          "startSec": 25.86,
+          "endSec": 26.04
+        },
+        {
+          "text": "karaoke",
+          "startSec": 26.04,
+          "endSec": 26.38
+        },
+        {
+          "text": "captions",
+          "startSec": 26.38,
+          "endSec": 26.88
+        },
+        {
+          "text": "one",
+          "startSec": 26.88,
+          "endSec": 27.24
+        },
+        {
+          "text": "word",
+          "startSec": 27.24,
+          "endSec": 27.48
+        },
+        {
+          "text": "at",
+          "startSec": 27.48,
+          "endSec": 27.64
+        },
+        {
+          "text": "a",
+          "startSec": 27.64,
+          "endSec": 27.72
+        },
+        {
+          "text": "time.",
+          "startSec": 27.72,
+          "endSec": 28.02
+        }
+      ]
+    },
+    {
+      "text": "Finally, the scenes, narration, and captions come together as one vertical video, ready to review and share.",
+      "startSec": 28.8,
+      "endSec": 35.1,
+      "words": [
+        {
+          "text": "Finally,",
+          "startSec": 28.8,
+          "endSec": 29.36
+        },
+        {
+          "text": "the",
+          "startSec": 29.66,
+          "endSec": 29.76
+        },
+        {
+          "text": "scenes,",
+          "startSec": 29.76,
+          "endSec": 30.1
+        },
+        {
+          "text": "narration,",
+          "startSec": 30.46,
+          "endSec": 30.82
+        },
+        {
+          "text": "and",
+          "startSec": 30.82,
+          "endSec": 31.18
+        },
+        {
+          "text": "captions",
+          "startSec": 31.18,
+          "endSec": 31.54
+        },
+        {
+          "text": "come",
+          "startSec": 31.54,
+          "endSec": 31.92
+        },
+        {
+          "text": "together",
+          "startSec": 31.92,
+          "endSec": 32.26
+        },
+        {
+          "text": "as",
+          "startSec": 32.26,
+          "endSec": 32.54
+        },
+        {
+          "text": "one",
+          "startSec": 32.54,
+          "endSec": 32.78
+        },
+        {
+          "text": "vertical",
+          "startSec": 32.78,
+          "endSec": 33.16
+        },
+        {
+          "text": "video,",
+          "startSec": 33.16,
+          "endSec": 33.5
+        },
+        {
+          "text": "ready",
+          "startSec": 33.96,
+          "endSec": 34.16
+        },
+        {
+          "text": "to",
+          "startSec": 34.16,
+          "endSec": 34.38
+        },
+        {
+          "text": "review",
+          "startSec": 34.38,
+          "endSec": 34.64
+        },
+        {
+          "text": "and",
+          "startSec": 34.64,
+          "endSec": 34.86
+        },
+        {
+          "text": "share.",
+          "startSec": 34.86,
+          "endSec": 35.1
+        }
+      ]
+    },
+    {
+      "text": "Start with one sentence. Shape it into a story. Finish with a video.",
+      "startSec": 35.9,
+      "endSec": 39.76,
+      "words": [
+        {
+          "text": "Start",
+          "startSec": 35.9,
+          "endSec": 36.22
+        },
+        {
+          "text": "with",
+          "startSec": 36.22,
+          "endSec": 36.44
+        },
+        {
+          "text": "one",
+          "startSec": 36.44,
+          "endSec": 36.62
+        },
+        {
+          "text": "sentence.",
+          "startSec": 36.62,
+          "endSec": 36.96
+        },
+        {
+          "text": "Shape",
+          "startSec": 37.54,
+          "endSec": 37.78
+        },
+        {
+          "text": "it",
+          "startSec": 37.78,
+          "endSec": 37.92
+        },
+        {
+          "text": "into",
+          "startSec": 37.92,
+          "endSec": 38.08
+        },
+        {
+          "text": "a",
+          "startSec": 38.08,
+          "endSec": 38.2
+        },
+        {
+          "text": "story.",
+          "startSec": 38.2,
+          "endSec": 38.46
+        },
+        {
+          "text": "Finish",
+          "startSec": 39.04,
+          "endSec": 39.24
+        },
+        {
+          "text": "with",
+          "startSec": 39.24,
+          "endSec": 39.46
+        },
+        {
+          "text": "a",
+          "startSec": 39.46,
+          "endSec": 39.52
+        },
+        {
+          "text": "video.",
+          "startSec": 39.52,
+          "endSec": 39.76
+        }
+      ]
+    }
+  ]
+}
