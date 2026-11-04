@@ -43,7 +43,7 @@ The CLI scaffolds projects from `templates/explainer/`. Each project keeps its r
 
 <h2 align="center">Regional-language ad example</h2>
 
-The MindKraft sample is a promotional video for a UK job-search service, narrated in conversational Godavari Telugu with natural English code-switching. Its cover, visual beats, and Instagram caption are in English.
+The MindKraft sample is a promotional video for a UK job-search service, narrated in conversational in regional with natural English code-switching. Its cover, visual beats, and Instagram caption are in English.
 
 <p align="center">
   <img src="examples/screenshots/mindkraft-user-approval.jpg" alt="MindKraft ad showing application tracking and user approval" width="360" />
