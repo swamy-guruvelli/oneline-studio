@@ -7,7 +7,7 @@
 - Concept title: __TITLE__
 - Hook: __HOOK__
 
-## AI Studio delivery direction
+## Voice direction
 
 Warm, clear, conversational delivery. Add topic-specific pronunciation, emphasis, and pause guidance here.
 

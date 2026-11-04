@@ -73,11 +73,13 @@ def paragraph_text(script_path):
     paragraphs = fenced_paragraphs(source, "Narration text for TTS")
     if paragraphs is not None:
         return paragraphs
-    try:
-        section = source.split("## Narration draft", 1)[1].split("## Google AI Studio voice direction", 1)[0]
-    except IndexError as exc:
-        raise RuntimeError(f"Narration section is missing in {script_path}") from exc
-    return [line.strip() for line in section.splitlines() if line.strip()]
+    legacy_section = re.search(
+        r"^##\s+Narration draft\s*\r?\n(.*?)(?=^##\s+|\Z)",
+        source, re.M | re.S,
+    )
+    if not legacy_section:
+        raise RuntimeError(f"Narration section is missing in {script_path}")
+    return [line.strip() for line in legacy_section.group(1).splitlines() if line.strip()]
 
 
 def align_project(model, project_name, device):

@@ -7,7 +7,7 @@
 - Hook: `What happens between one simple sentence and a finished video?`
 - Cover prompt: `WHAT IF...?`
 
-## AI Studio delivery direction
+## Voice direction
 
 Use a friendly, clear, confident voice. Start with curious emphasis on “one simple sentence.” Keep the steps brisk but distinct. Pause briefly before “karaoke captions” and “one vertical video.” Finish with an inviting, practical tone.
 

@@ -1,5 +1,5 @@
 {
-  "voice": "Google AI Studio narration aligned with local Whisper word timestamps",
+  "voice": "User-supplied narration aligned with local Whisper word timestamps",
   "durationSeconds": 40.24,
   "alignment": {
     "scriptWords": 110,
